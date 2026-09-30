@@ -22,7 +22,13 @@
     <div class="container">
         <h2>Calculadora de Pegada de Carbono do Deslocamento</h2>
 
-
+        {% if erros %}
+        {% for erro in erros %}
+        <div class="alert alert-danger" role="alert">
+            {{ erro }}
+        </div>
+        {% endfor %}
+        {% endif %}
         <p class="lead">
             Como você se desloca no seu dia?
         </p>
