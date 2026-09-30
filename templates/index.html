@@ -79,7 +79,21 @@
 
             </div>
         </div>
-
+        {% if resultado %}
+        <div class="card shadow-sm mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">📊 Resultado</h5>
+            </div>
+            <div class="card-body">
+                <p class="mb-1">
+                    Quilômetros por mês: <strong>{{ '%.2f' | format(resultado.km_mes) }} km</strong>
+                </p>
+                <p class="mb-0">
+                    Emissão mensal estimada: <strong>{{ '%.2f' | format(resultado.emissao_mensal) }} kg de CO₂</strong>
+                </p>
+            </div>
+        </div>
+        {% endif %}
 
 
     </div>
