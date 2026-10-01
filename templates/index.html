@@ -85,6 +85,9 @@
                 <h5 class="mb-0">📊 Resultado</h5>
             </div>
             <div class="card-body">
+                <p class="mb-0">
+                    Classificação: <strong>{{ resultado.faixa }}</strong>
+                </p>
                 <p class="mb-1">
                     Quilômetros por mês: <strong>{{ '%.2f' | format(resultado.km_mes) }} km</strong>
                 </p>

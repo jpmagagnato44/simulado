@@ -59,9 +59,25 @@ def calculadora():
             km_mes = distancia_valida * dias_validos * 4
             emissao_mensal = km_mes * fator
 
+            if emissao_mensal <= 20:
+                faixa = 'Baixo impacto'
+            elif emissao_mensal <= 60:
+                faixa = 'Impacto moderado'
+            elif emissao_mensal <= 120:
+                faixa = 'Alto impacto'    
+            else:
+                faixa = 'Impacto crítico'
+
+            print('faixa calculada:', faixa)
+
+
+
+
+
             resultado = {
                 'km_mes': km_mes,
                 'emissao_mensal': emissao_mensal,
+                'faixa': faixa,
             }
     return render_template('index.html', erros=erros, resultado=resultado, distancia_dia=distancia_dia,
                            dias_semana=dias_semana, meio_transporte=meio_transporte)
