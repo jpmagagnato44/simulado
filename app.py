@@ -87,7 +87,9 @@ def calculadora():
 
 
 
-
+@app.route('/equipe')
+def equipe():
+    return render_template('equipe.html')
 
 
 
